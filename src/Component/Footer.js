@@ -9,7 +9,7 @@ export default class Footer extends Component {
                             <div className="row">
 
                                 <div className="col-lg-3 col-md-6 footer-info">
-                                    <img src="assets/img/PurohitMoshaiLogo.png" alt="TheEvenet"/>
+                                    <img src={process.env.PUBLIC_URL + "/assets/img/PurohitMoshaiLogo.png"} alt="TheEvenet"/>
                                     <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
                                 </div>
 

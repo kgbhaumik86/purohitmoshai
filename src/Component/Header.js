@@ -11,7 +11,7 @@ export default class Header extends Component {
 
                     <div id="logo" className="pull-left">
                         <a href="index.html" className="scrollto">
-                            <img src= {process.env.PUBLIC_URL + "assets/img/PurohitMoshaiLogo.png"} alt="" title=""/>
+                            <img src= {process.env.PUBLIC_URL + "/assets/img/PurohitMoshaiLogo.png"} alt="" title=""/>
                         </a>                        
                     </div>
                     {/* <nav id="nav-menu-container">
