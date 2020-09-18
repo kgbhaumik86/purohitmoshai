@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AboutData from './JSON/About_JSON'
 
 export default class About extends Component {
     render() {
@@ -8,8 +9,9 @@ export default class About extends Component {
                     <div className="container" data-aos="fade-up">
                         <div className="row">
                         <div >
-                            <h2>About Kalibari</h2>
-                            <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h2 style={{'color': '#f82249'}}>{AboutData.kalibari.aboutTitle}</h2>
+                            <p style={{'text-align': 'justify'}}>{AboutData.kalibari.content1}</p>
+                            <p style={{'text-align': 'justify'}}>{AboutData.kalibari.content2}</p>
                         </div>
                         <div className="col-lg-7">
                             <h3>Where it is?</h3>
@@ -20,13 +22,17 @@ export default class About extends Component {
                             <p>Monday to Wednesday 10-12 December</p>
                         </div>
                         <div className="col-lg-12">
-                            <h2>More Info1</h2>
-                            <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h2 style={{'color': '#f82249'}}>{AboutData.purohitMoshai.title}</h2>
+                            <p style={{'text-align': 'justify'}}>{AboutData.purohitMoshai.content1}</p>
+                            <p style={{'text-align': 'justify'}}>{AboutData.purohitMoshai.content2}</p>
+                            <p style={{'text-align': 'justify'}}>{AboutData.purohitMoshai.content3}</p>
+                            <p style={{'text-align': 'justify'}}>{AboutData.purohitMoshai.content4}</p>
+                            <p style={{'text-align': 'justify'}}>{AboutData.purohitMoshai.content5}</p>
                         </div>
-                        <div className="col-lg-12">
+                        {/* <div className="col-lg-12">
                             <h2>More Info2</h2>
                             <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                        </div>
+                        </div> */}
                         </div>                                        
                     </div>
                 </div>             

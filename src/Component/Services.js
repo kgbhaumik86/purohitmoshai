@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import ServicesInfo from './JSON/Services_JSON'
+import ServiceHeading from './JSON/ServiceHeading_JSON'
 import ServModalInfo from './JSON/ServicesModal_JSON'
 import {Container, Row, Col} from 'react-bootstrap'
 
@@ -32,7 +33,9 @@ export default class Services extends Component {
                     <div className="container" data-aos="fade-up">
                         <div className="section-header">
                             <h2>Services</h2>
-                            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                            <p>{ServiceHeading.servHead.content1}</p>
+                            <p style={{'text-align': 'justify', 'padding-top': '10px'}}>{ServiceHeading.servHead.content2}</p>
+                            <p style={{'text-align': 'justify', 'padding-top': '10px'}}>{ServiceHeading.servHead.content3}</p>
                         </div>                        
                         <div className="row">
                             { ServicesInfo.map((serv) =>
@@ -55,15 +58,17 @@ export default class Services extends Component {
                     aria-labelledby="contained-modal-title-vcenter"
                     centered>
                     <Modal.Header closeButton>
-                        <h2>{this.state.filteredModal.title}</h2>
+                        <h2>{this.state.filteredModal.title}</h2>                        
                     </Modal.Header>
                     <Modal.Body>
                         <Container>
-                            <Row> 
+                            <Row>                                 
                                 <div class="col-md-3">
                                     <img src={process.env.PUBLIC_URL + this.state.filteredModal.imgUrl} alt="Speaker 1" class="img-fluid"/>
                                 </div>
                                 <div class="col-md-9">
+                                    <div style={{'text-align': 'justify', 'font-weight': '700', 'color': 'black'}}>{this.state.filteredModal.subTitle}</div>
+                                    <br></br>
                                     <div class="details">{this.state.filteredModal.description_Full}</div>
                                 </div>                               
                             </Row>                            
