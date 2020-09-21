@@ -68,8 +68,6 @@ export default class Gallery extends Component {
                     <OwlCarousel
                             loop
                             margin={10}
-                            smartSpeed
-                            autoplay
                             items = {2}
                             responsive={this.state.responsiveVideo}>
                             {GalaryInfo.map((video) => 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import ServicesInfo from './JSON/Services_JSON'
@@ -69,7 +69,13 @@ export default class Services extends Component {
                                 <div class="col-md-9">
                                     <div style={{'text-align': 'justify', 'font-weight': '700', 'color': 'black'}}>{this.state.filteredModal.subTitle}</div>
                                     <br></br>
-                                    <div class="details">{this.state.filteredModal.description_Full}</div>
+                                    <div class="details">
+                                        {this.state.filteredModal.description_Full}
+                                        <p style={{'text-align': 'justify', 'padding-top': '10px'}}>{this.state.filteredModal.description_Full1}</p>
+                                        <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full2}</p>
+                                        <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full3}</p>
+                                        <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full4}</p>
+                                    </div>
                                 </div>                               
                             </Row>                            
                         </Container>
