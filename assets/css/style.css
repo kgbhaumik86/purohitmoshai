@@ -524,7 +524,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
   color: #fff;
   /* font-family: "Raleway", sans-serif; */
-  font-family: emoji;
+  font-family: emoji !important;
   font-size: 56px;
   font-weight: 500;
   /* text-transform: uppercase; */
