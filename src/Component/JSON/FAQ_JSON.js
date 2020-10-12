@@ -5,7 +5,7 @@ const faqData = {
             content: `You can find the Contact no in this website please call this no. Otherwise click the book button from the home page of this website. It will directly send your querries through whatsapp.`,
         },
         {
-            title: "Can I Pay Partial Amount As Advance To Confirm The Poojas And Pay The Balance As Cash Or Pay Online After The Homam?",
+            title: "Can I Pay Partial Amount As Advance To Confirm The Poojas And Pay The Balance As Cash Or Pay Online After The Puja?",
             content:
                 "Yes, you can pay the partial amount as token advance to confirm your booking. You can pay the balance amount after the rituals with cash directly to our Priests.",
         },
