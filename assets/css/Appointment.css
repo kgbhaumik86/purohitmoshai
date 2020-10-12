@@ -1,0 +1,43 @@
+
+h3{
+    color:white;
+    text-align:center;
+    font-style: italic;
+    font-weight: bold;
+}
+.textHeader{
+    font-weight: bold !important;
+    font-size:18px !important;
+    color:rgba(248, 34, 73, 1) !important;
+}
+.errortext{
+    font-size:14px;
+    font-style:italic;
+    font-weight:bold;
+    padding:2px;
+}
+.spanstar{
+    color: rgba(248, 34, 73, 1) !important
+}
+.close{
+    font-size:30px;
+}
+.modal-content{
+    border: none;
+}
+.btnposition{
+    text-align:center;
+}
+.booking-form .form-control{
+    height:40px !important;
+}
+.btn-appt{
+    background-color: rgba(248, 34, 73, 1) !important;
+    color: #fff;
+    border-color: rgba(248, 34, 73, 1) !important;
+    font-weight: bold;
+    font-size:16px;
+}
+.fade .modal .show{
+background-color:none;
+}

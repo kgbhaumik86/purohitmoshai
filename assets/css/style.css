@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 70px;
+  max-height: 110px;
 }
 
 /*--------------------------------------------------------------
@@ -1409,9 +1409,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 768px) {
-  #contact .contact-phone {
+  #contact .contact-phone  {
     border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd;    
   }
 }
 
@@ -1545,8 +1545,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-info img {
-  height: 60px;
+  /* height: 60px; */
   margin-bottom: 10px;
+  max-height: 110px
 }
 
 #footer .footer-top .footer-info p {
@@ -1679,3 +1680,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* #f82249; */
+
+
+
+#ItroModal .modal-body .modal-content{   
+  padding: 0rem !important;
+  background-color : #000000 !important;
+  
+}
+.img-fluid1 {
+
+}
