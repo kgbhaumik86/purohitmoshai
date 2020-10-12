@@ -1,14 +1,19 @@
-import React, { Component } from 'react'
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
-import {Container, Row, Col} from 'react-bootstrap'
+import React, { Component } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import {Container, Row, Col} from 'react-bootstrap';
+import './Bookingfromstyle/Appointment.css';
 
 export default class IntroPage extends Component {
-    constructor(props) {
-        super(props)     
+    constructor() {
+        super()     
         this.state = {
-            isContVisible: false,            
-        }
+            isContVisible: false,
+            input: {},
+            errors: {}
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);      
     }
     contShow = () => {        
         this.setState({
@@ -20,110 +25,241 @@ export default class IntroPage extends Component {
             isContVisible: false
         })
     }
-    render() {
+  //   handleClick() {
+  //       let name = document.getElementById("frm_name").value;
+  //       let date = document.getElementById("frm_date").value;
+  //       let purpose = document.getElementById("frm_purpose").value;
+  //       let email = document.getElementById("frm_email").value;
+  //       let phone = document.getElementById("frm_phone").value;
+  //       let num = 9836952545
+  //       //var win = window.open(`https://wa.me/${num}?text=Hi%20I%20am%20${name}%20and%20to%20contact%20you%20for%20this%20${purpose}`, '_blank');
+  //       //var win = Linking.openURL('whatsapp://send?text=hello&phone=9836952545')
+  //  // var win = window.open(`https://wa.me/${num}?text=I%27m%20api%20msg%20hello%20${name}%20friend%20${purpose}`, '_blank');
+  //      // alert("Test")
+  //   }
+
+    handleChange(event) {
+        let input = this.state.input;
+        let error = this.state.errors;
+        input[event.target.name] = event.target.value;
+        
+        if(!input[event.target.name])
+        {
+          error[event.target.name] = "Please enter  " + event.target.name;
+          this.setState({
+            errors: error
+          });
+        }
+        else{
+          error[event.target.name] = "";
+          this.setState({
+            errors: error
+          });
+        }
+        this.setState({
+          input
+        });
+      }
+    
+      SendWatsapp(objmsg)
+      {
+        //alert(objmsg.name);
+        //let num = 91+objmsg.phone;
+        let num = 919632394275;
+        let name = objmsg.name;
+        let purpose = objmsg.purpose;
+        let email = objmsg.email;
+        //alert(num)
+        //var win = window.open(`https://wa.me/${num}?text=I%27m%20api%20msg%20hello%20${name}%20friend%20${purpose}`, '_blank');
+        var win = window.open(`https://wa.me/${num}?text=Hi%20PurohitMoshay%20I%20am%20${name}%20and%20want%20to%20contact%20you%20for-%20"${purpose}"`, '_blank');
+      }
+      handleSubmit(event) {
+        event.preventDefault();
+      
+        if(this.validate()){
+            console.log(this.state);
+            let inputfinal = this.state.input;
+            let input = {};
+            input["name"] = "";
+            input["email"] = "";
+            input["phone"] = "";
+            input["purpose"] = "";
+            
+      
+            // alert('Your request is redirecting to Watsapp');
+            this.SendWatsapp(inputfinal);
+            this.setState({input:input});
+        }
+      }
+
+    validate(){
+        let input = this.state.input;
+        let errors = {};
+        let isValid = true;
+    
+        if (!input["name"]) {
+          isValid = false;
+          errors["name"] = "Please enter your name.";
+        }
+    
+        if (!input["email"]) {
+          isValid = false;
+          errors["email"] = "Please enter your email Address.";
+        }
+    
+        if (typeof input["email"] !== "undefined") {
+            
+          var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+          if (!pattern.test(input["email"])) {
+            isValid = false;
+            errors["email"] = "Please enter valid email address.";
+          }
+        }
+    
+        if (!input["purpose"]) {
+          isValid = false;
+          errors["purpose"] = "Please enter your purpose.";
+        }
+        if (!input["phone"]) {
+          isValid = false;
+          errors["phone"] = "Please enter your phone no.";
+        }
+  
+        if (typeof input["phone"] !== "undefined") {
+            
+          var pattern = new RegExp(/^[0-9\b]+$/);
+          if (!pattern.test(input["phone"])) {
+            isValid = false;
+            errors["phone"] = "Please enter only number.";
+          }else if(input["phone"].length != 10){
+            isValid = false;
+            errors["phone"] = "Please enter your valid 10 digit phone number.";
+          }
+        }
+    
+        this.setState({
+          errors: errors
+        });
+    
+        return isValid;
+    }
+    
+    render() {        
         return (
             <section id="intro">
                 <div className="intro-container" data-aos="zoom-in" data-aos-delay="100">
                     <h1 className="mb-4 pb-0"><span>Purohitmoshai</span> <br />Bangalore</h1>
                     <p className="mb-4 pb-0">Electronic City Phase 1, Kalibari</p>
                     <a href="https://youtu.be/BrUZ34PIe1U" className="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-                    <a href="#about" className="about-btn scrollto">About Kalibari</a>
-                    <a onClick={this.contShow} className="about-btn scrollto">Book Appoinment</a>
+                    <div className="row">
+                        <a href="#about" className="about-btn scrollto">About Kalibari</a>
+                        <a onClick={this.contShow} className="about-btn scrollto">Book Appointment</a>
+                    </div>                    
                 </div>
-                <Modal size="lg"
+                <Modal size="lg sm md xs"
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
                     show={this.state.isContVisible} onHide={this.contClose}
                     animationType="fade"
-                    transparent={true}
-                    // style={{
-                    //     "background-image": `url("https://upload.wikimedia.org/wikipedia/commons/8/8a/Tree_icon_w_outline.png")`
-                    //  }}
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter">
-                        <h1>Book your Appoinment</h1>
+                    transparent={true}                    
+                    style={{
+                        "background-color": ""
+                     }}
+                id="ItroModal">
+                    <Modal.Header closeButton style={{'background-color': 'rgba(248, 34, 73, 1)'}}>
+                        <Modal.Title id="contained-modal-title-vcenter" style={{'width': '100%'}}>
+                            <h3>Book your Appointment</h3>
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
-                        <form>
-                            <div className="form-group">
-                                <input className="form-control" type="text" placeholder="Country, ZIP, city..."/>
-                                    <span className="form-label">Destination</span>
-							</div>
-                            <div className="row">
-                                    <div className="col-md-6">
-                                        <div className="form-group">
-                                            <input className="form-control" type="date" required/>
-                                                <span className="form-label">Check In</span>
-									</div>
+                    <Modal.Body style={{ 'height':'auto','background-color': 'lightgrey'}}>
+                        <div id="booking" class="section" style={{ 'height':'auto'}}>
+                            <div class="section-center">
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="booking-form" style={{ 'height':'auto'}}>
+                                            {/* <div class="form-header">
+                                                <h1>Make your reservation</h1>
+                                            </div> */}
+                                                  
+                                            {/* <h1 style={{'font-size':'larger','text-decoration':'underline'}}>BOOK APPOINTMENT</h1> */}
+                                            <form onSubmit={this.handleSubmit}>
+                                    
+                                            <div class="form-group">
+                                                <label for="name" class="textHeader">Name: <span class="spanstar">*</span></label>
+                                                <input 
+                                                type="text" 
+                                                name="name" 
+                                                value={this.state.input.name}
+                                                onChange={this.handleChange}
+                                                class="form-control" 
+                                                placeholder="Enter name" 
+                                                id="name" />
+                                    
+                                                <div className="text-danger errortext">{this.state.errors.name}</div>
+                                            </div>
+                                    
+                                            <div class="form-group">
+                                                <label for="email" class="textHeader">Email Address: <span class="spanstar">*</span></label>
+                                                <input 
+                                                type="text" 
+                                                name="email" 
+                                                value={this.state.input.email}
+                                                onChange={this.handleChange}
+                                                class="form-control" 
+                                                placeholder="Enter email" 
+                                                id="email" />
+                                    
+                                                <div className="text-danger errortext">{this.state.errors.email}</div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="phone" class="textHeader">Phone: <span class="spanstar">*</span></label>
+                                                <input 
+                                                type="number" 
+                                                name="phone" 
+                                                value={this.state.input.phone}
+                                                onChange={this.handleChange}
+                                                class="form-control" 
+                                                placeholder="Enter phone no." 
+                                                id="phone"
+                                                />
+                                    
+                                                <div className="text-danger errortext">{this.state.errors.phone}</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col">
+                                            <div class="form-group">
+                                                <label for="purpose" class="textHeader">Purpose: <span class="spanstar">*</span></label>
+                                                <textarea 
+                                                name="purpose"
+                                                maxLength="200"
+                                                rows={6}
+                                                style={{ 'max-height':'100px','min-height':'60px'}}
+                                                value={this.state.input.purpose} 
+                                                onChange={this.handleChange}
+                                                placeholder="Enter purpose"
+                                                class="form-control" />
+                                    
+                                                <div className="text-danger errortext">{this.state.errors.purpose}</div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                                <div class="btnposition">
+                                                <input type="submit" value="Submit" class="btn btn-success btn-appt" />
+                                                </div>
+                                            
+                                            </form>
                                         </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <input className="form-control" type="date" required/>
-                                                    <span className="form-label">Check out</span>
-									</div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-md-4">
-                                                <div className="form-group">
-                                                    <select className="form-control" required>
-                                                        <option value="" selected hidden>no of rooms</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                    </select>
-                                                    <span className="select-arrow"></span>
-                                                    <span className="form-label">Rooms</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4">
-                                                <div className="form-group">
-                                                    <select className="form-control" required>
-                                                        <option value="" selected hidden>no of adults</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                    </select>
-                                                    <span className="select-arrow"></span>
-                                                    <span className="form-label">Adults</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4">
-                                                <div className="form-group">
-                                                    <select className="form-control" required>
-                                                        <option value="" selected hidden>no of children</option>
-                                                        <option>0</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                    </select>
-                                                    <span className="select-arrow"></span>
-                                                    <span className="form-label">Children</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <div className="form-group">
-                                                    <input className="form-control" type="email" placeholder="Enter your Email"/>
-                                                        <span className="form-label">Email</span>
-									</div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="form-group">
-                                                        <input className="form-control" type="tel" placeholder="Enter you Phone"/>
-                                                            <span className="form-label">Phone</span>
-									</div>
-                                                    </div>
-                                                </div>
-                                                <div className="form-btn">
-                                                    <button className="submit-btn">Book Now</button>
-                                                </div>
-						</form>
+                                     </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={this.contClose}>Close</Button>
+                    <Modal.Footer style={{'background-color': 'lightgrey'}}>  
+                    <input type="submit" value="Close" onClick={this.contClose} class="btn btn-success btn-appt" />            
+                    {/* <Button onClick={this.contClose} class="btn-appt">Close</Button> */}
                     </Modal.Footer>
                 </Modal>
             </section>   

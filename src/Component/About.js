@@ -8,7 +8,7 @@ export default class About extends Component {
                 <div className = "sectionDiv">
                     <div className="container" data-aos="fade-up">
                         <div className="row">
-                        <div >
+                        <div className="col-lg-12">
                             <h2 style={{'color': '#f82249'}}>{AboutData.kalibari.aboutTitle}</h2>
                             <p style={{'text-align': 'justify'}}>{AboutData.kalibari.content1}</p>
                             <p style={{'text-align': 'justify'}}>{AboutData.kalibari.content2}</p>
@@ -18,8 +18,8 @@ export default class About extends Component {
                             <p>Electronic city phase 1, Bangalore </p>
                         </div>
                         <div className="col-lg-3">
-                            <h3>When Started</h3>
-                            <p>Monday to Wednesday 10-12 December</p>
+                            <h3>Temple timing</h3>
+                            <p>Everday - 9 AM to 1 PM, 5 PM to 9 PM</p>
                         </div>
                         <div className="col-lg-12">
                             <h2 style={{'color': '#f82249'}}>{AboutData.purohitMoshai.title}</h2>

@@ -1,47 +1,45 @@
 const faqData = {       
     rows: [
         {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat, 
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus. 
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae. 
-              Fusce sed commodo purus, at tempus turpis.`,
+            title: "How to book Purohit for Puja.",
+            content: `You can find the Contact no in this website please call this no. Otherwise click the book button from the home page of this website. It will directly send your querries through whatsapp.`,
         },
         {
-            title: "Nunc maximus, magna at ultricies elementum",
+            title: "Can I Pay Partial Amount As Advance To Confirm The Poojas And Pay The Balance As Cash Or Pay Online After The Homam?",
             content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+                "Yes, you can pay the partial amount as token advance to confirm your booking. You can pay the balance amount after the rituals with cash directly to our Priests.",
         },
         {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem. 
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam. 
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat. 
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+            title: "How Long Does The Puja/Havan Take To Complete?",
+            content: `It depends on the Puja you select.`,
         },
         {
-            title: "Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?",
-            content: "Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.",
+            title: "What All Items I Need To Keep Ready For The Puja, How Will I Know?",
+            content: "As soon as you book Purohitmoshay by paying advance or full amount you will be receiving a To-do List in your whatsapp in few hours, which will clearly mention all the required items. ",
         },
         {
-            title: "Tempus quam pellentesque nec nam aliquam sem et tortor consequat?",
-            content: "Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in",
+            title: "What All Materials Will The Priest Bring Along With Him?",
+            content: "You can book purohitmoshay with samagri or without samagri. ",
         },
         {
-            title: "Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?",
-            content: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.",
+            title: "Do I Need To Pay Any Extra Dakshina To The Priest?",
+            content: "No, you don’t need to pay any extra amount as dakshina as this will be already included in the package.",
         },
         {
-            title: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?",
-            content: "Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis",
+            title: "Do I Need To Pay Extra For The Travel Charge?",
+            content: "No, you don’t need to pay extra for the travel charges. but if the pooja is very very far and out of our service area limit , then you need to pay the extra charge which you can ask with the support team while booking.",
         },
         {
-            title: "Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?",
-            content: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.",
+            title: "Can he perform pujas for all the different hindu Sanatan cultural rituals?",
+            content: "Purohitmoshay Shivshankar Bhattacharya spent his earlier life in Kashi Shankar Math. So he is an expert to speak differnt Indian Languages like Hindi,Bengali,Odia,Rajasthani, Punjabi, Assamese, Tripura etc. He can able to perform all the Santan Cultural rituals.",
         },
         {
-            title: "Non consectetur a erat nam at lectus urna duis?",
-            content: "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+            title: "What Will I Do If The Pandit Is Not Coming On Time?",
+            content: "Most of the time our Pandits will be before the given time, but sometimes due to some unavoidable circumstances pandits will be a bit late but they will reach your place so you can be assured they will come.",
+        },
+        {
+            title: "How can I do sankalp puja if I am in outside or in abroad.",
+            content: "In that case we have famous Kalibari temple in Bangalore Electronic city and Purohitmoshay Shivshankar is the owner of this temple. Your puja will get done after your booking confirmation.",
         },
     ],
 };

@@ -70,11 +70,11 @@ export default class Services extends Component {
                                     <div style={{'text-align': 'justify', 'font-weight': '700', 'color': 'black'}}>{this.state.filteredModal.subTitle}</div>
                                     <br></br>
                                     <div class="details">
-                                        {this.state.filteredModal.description_Full}
-                                        <p style={{'text-align': 'justify', 'padding-top': '10px'}}>{this.state.filteredModal.description_Full1}</p>
+                                        <p style={{'text-align': 'justify', 'padding-top': '10px'}}>{this.state.filteredModal.description_Full}</p>
+                                        {/* <p style={{'text-align': 'justify', 'padding-top': '10px'}}>{this.state.filteredModal.description_Full1}</p>
                                         <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full2}</p>
                                         <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full3}</p>
-                                        <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full4}</p>
+                                        <p style={{'text-align': 'justify', 'padding-top': '5px'}}>{this.state.filteredModal.description_Full4}</p> */}
                                     </div>
                                 </div>                               
                             </Row>                            
