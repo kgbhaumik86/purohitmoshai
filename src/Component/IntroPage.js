@@ -148,7 +148,7 @@ export default class IntroPage extends Component {
         return (
             <section id="intro">
                 <div className="intro-container" data-aos="zoom-in" data-aos-delay="100">
-                    <h1 className="mb-4 pb-0"><span>Purohitmoshai</span> <br />Bangalore</h1>
+                    <h1 className="mb-4 pb-0"><span>Purohitmoshay</span> <br />Bangalore</h1>
                     <p className="mb-4 pb-0">Electronic City Phase 1, Kalibari</p>
                     <a href="https://youtu.be/BrUZ34PIe1U" className="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
                     <div className="row">
